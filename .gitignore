@@ -46,3 +46,6 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
+# File is too large for Git, keep local for now
+VRduino Classroom_Data/sharedassets1.assets.resS

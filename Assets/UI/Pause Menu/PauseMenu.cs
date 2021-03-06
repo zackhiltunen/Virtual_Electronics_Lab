@@ -19,13 +19,13 @@ public class PauseMenu : MonoBehaviour
 
     private void Awake()
     {
-                controllers = new List<InputDevice>();
+        controllers = new List<InputDevice>();
     }
 
     private void Update()
     {
-        InputDevices.GetDevicesWithCharacteristics(InputDeviceCharacteristics.Controller, controllers);
-        CheckPause(controllers);
+        //InputDevices.GetDevicesWithCharacteristics(InputDeviceCharacteristics.Controller, controllers);
+        //CheckPause(controllers);
     }
 
     //Checks for menu button input then pauses or resumes game

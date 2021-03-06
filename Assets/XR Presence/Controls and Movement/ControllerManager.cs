@@ -43,20 +43,20 @@ public class ControllerManager : MonoBehaviour
     private void DisableInactiveControllers()
     {
         //initialize all       
-        InputDevices.GetDevicesWithCharacteristics(left, leftController);
-        InputDevices.GetDevicesWithCharacteristics(right, rightController);
-        //Debug.Log(leftControllerObject.name + " Count: " + leftController.Count);
+        // InputDevices.GetDevicesWithCharacteristics(left, leftController);
+        // InputDevices.GetDevicesWithCharacteristics(right, rightController);
+        // //Debug.Log(leftControllerObject.name + " Count: " + leftController.Count);
       
-        //check left controller
-        if (leftController.Count == 0 && leftControllerRig.activeSelf)
-            leftControllerRig.SetActive(false);
-        if (leftController.Count > 0 && !leftControllerRig.activeSelf)
-            leftControllerRig.SetActive(true);
+        // //check left controller
+        // if (leftController.Count == 0 && leftControllerRig.activeSelf)
+        //     leftControllerRig.SetActive(false);
+        // if (leftController.Count > 0 && !leftControllerRig.activeSelf)
+        //     leftControllerRig.SetActive(true);
 
-        //check right controller
-        if (rightController.Count == 0 && rightControllerRig.activeSelf)
-            rightControllerRig.SetActive(false);
-        if (rightController.Count > 0 && !rightControllerRig.activeSelf)
-            rightControllerRig.SetActive(true);
+        // //check right controller
+        // if (rightController.Count == 0 && rightControllerRig.activeSelf)
+        //     rightControllerRig.SetActive(false);
+        // if (rightController.Count > 0 && !rightControllerRig.activeSelf)
+        //     rightControllerRig.SetActive(true);
     }
 }

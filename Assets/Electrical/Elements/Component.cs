@@ -13,8 +13,13 @@ public class Component : MonoBehaviour
     public float Resistance { get; [SerializeField] protected set; } = 0f;
 
     public List<Node> Nodes { get { return Node.FindNodesForComponent(this); } private set {; } }
-    private CircuitManager circuitManager = GameObject.FindObjectOfType<CircuitManager>();
+    private CircuitManager circuitManager;
 
+    private void Start()
+    {
+        circuitManager = GameObject.FindObjectOfType<CircuitManager>();
+    }
+    
     private void Update()
     {
 

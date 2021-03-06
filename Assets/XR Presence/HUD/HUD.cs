@@ -11,16 +11,22 @@ namespace XR_Presence.HUD
         public Voltmeter vm;
         public Ammeter am;
 
+        // public void Start()
+        // {
+        //     v.text = " V";
+        //     a.text = " A";
+        // }
+
         private void Awake()
         {
             vm = FindObjectOfType<Voltmeter>();
             am = FindObjectOfType<Ammeter>();
         }
 
-        public void Update()
-        {
-            v.text = " V";
-            a.text = " A";
-        }
+        // public void Update()
+        // {
+        //     v.text = " V";
+        //     a.text = " A";
+        // }
     }
 }

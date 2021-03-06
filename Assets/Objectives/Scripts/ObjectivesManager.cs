@@ -11,13 +11,21 @@ public class ObjectivesManager : MonoBehaviour
 {
 
     public static ObjectivesManager Instance { get; private set; }
-    public List<Objective> objectives = new List<Objective>();
-    public GameObject nextLevelPortal = new GameObject();
-
-    private void Awake()
+    public List<Objective> objectives;
+    public GameObject nextLevelPortal;
+    
+    public void Start()
     {
+
+    }
+    private void Awake()
+    {   
+        objectives = new List<Objective>();
+        
+        nextLevelPortal = GameObject.Find("Next Level Portal");
+        
         //Add children of Objective Manager to list of objectives
-        objectives.AddRange(Instance.GetComponentsInChildren<Objective>());
+        //objectives.AddRange(Instance.GetComponentsInChildren<Objective>());
         
         //Find Instance of singleton
         if (Instance == null)
