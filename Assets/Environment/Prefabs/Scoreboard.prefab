@@ -191,6 +191,9 @@ MonoBehaviour:
   scoreHolderTransform: {fileID: 635303668}
   scoreboardEntryObject: {fileID: 5929508338396435969, guid: 63d2aa15403db0243a933db181b56093,
     type: 3}
+  testEntryData:
+    entryName: Zack
+    entryScore: 420
 --- !u!1001 &673410518374957244
 PrefabInstance:
   m_ObjectHideFlags: 0
