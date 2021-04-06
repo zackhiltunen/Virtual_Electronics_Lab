@@ -19,8 +19,10 @@ namespace XR_Presence.HUD
 
         private void Awake()
         {
+            /*
             vm = FindObjectOfType<Voltmeter>();
             am = FindObjectOfType<Ammeter>();
+            */
         }
 
         // public void Update()

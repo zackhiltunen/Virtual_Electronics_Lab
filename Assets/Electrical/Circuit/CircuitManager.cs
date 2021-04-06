@@ -16,7 +16,7 @@ public class CircuitManager : MonoBehaviour
     private void Awake()
     {
         Nodes = Node.TotalNodes;
-
+        
         //find maxX & maxY
         foreach (Node n in Nodes)
         {

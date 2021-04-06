@@ -17,15 +17,21 @@ public class PauseMenu : MonoBehaviour
     private bool subMenuIsOpen = false;  //Only really used for pause button functionality
     private bool buttonLastPressed = false;
 
+    private void Start(){
+        controllers = new List<InputDevice>();
+        InputDevices.GetDevicesWithCharacteristics(InputDeviceCharacteristics.Controller, controllers);
+        mainPauseMenu = gameObject;
+        objectivesMenu = gameObject;
+    }
+
     private void Awake()
     {
-        controllers = new List<InputDevice>();
+        
     }
 
     private void Update()
     {
-        //InputDevices.GetDevicesWithCharacteristics(InputDeviceCharacteristics.Controller, controllers);
-        //CheckPause(controllers);
+        CheckPause(controllers);
     }
 
     //Checks for menu button input then pauses or resumes game
