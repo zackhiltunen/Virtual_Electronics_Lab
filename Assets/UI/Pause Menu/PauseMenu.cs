@@ -31,6 +31,10 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
+<<<<<<< HEAD
+=======
+        InputDevices.GetDevicesWithCharacteristics(InputDeviceCharacteristics.Controller, controllers);
+>>>>>>> workflow-zack
         CheckPause(controllers);
     }
 
