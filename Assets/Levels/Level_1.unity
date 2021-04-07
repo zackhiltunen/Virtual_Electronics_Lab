@@ -3544,7 +3544,7 @@ PrefabInstance:
     - target: {fileID: 1395103941305154690, guid: d0417e4f8b694ba4c8418a4ce9d24c80,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.06815636
+      value: -0.06815624
       objectReference: {fileID: 0}
     - target: {fileID: 1500561681252193958, guid: d0417e4f8b694ba4c8418a4ce9d24c80,
         type: 3}
@@ -3615,16 +3615,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3482105870944580797, guid: d0417e4f8b694ba4c8418a4ce9d24c80,
-        type: 3}
-      propertyPath: testEntryData.entryName
-      value: Zack
-      objectReference: {fileID: 0}
-    - target: {fileID: 3482105870944580797, guid: d0417e4f8b694ba4c8418a4ce9d24c80,
-        type: 3}
-      propertyPath: testEntryData.entryScore
-      value: 420
       objectReference: {fileID: 0}
     - target: {fileID: 3692680771531413532, guid: d0417e4f8b694ba4c8418a4ce9d24c80,
         type: 3}
