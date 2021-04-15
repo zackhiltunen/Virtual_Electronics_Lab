@@ -125,7 +125,9 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 0.1
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 7923735652601868626, guid: f4d18cdb9adde614b8574049e62cb5ad, type: 2}
+  - {fileID: -7081646774742392368, guid: 877cbf0caf4e8e14abe1eba8f1d7e89a, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -424,34 +426,9 @@ PlayerSettings:
     m_Devices: []
   - m_BuildTarget: Android
     m_Enabled: 0
-    m_Devices: []
-  - m_BuildTarget: iPhone
-    m_Enabled: 0
-    m_Devices: []
-  - m_BuildTarget: WebGL
-    m_Enabled: 0
-    m_Devices: []
-  - m_BuildTarget: Windows Store Apps
-    m_Enabled: 0
-    m_Devices: []
-  - m_BuildTarget: PS4
-    m_Enabled: 0
-    m_Devices: []
-  - m_BuildTarget: XboxOne
-    m_Enabled: 0
-    m_Devices: []
-  - m_BuildTarget: tvOS
-    m_Enabled: 0
-    m_Devices: []
-  - m_BuildTarget: Lumin
-    m_Enabled: 0
-    m_Devices: []
-  - m_BuildTarget: Stadia
-    m_Enabled: 0
-    m_Devices: []
-  - m_BuildTarget: CloudRendering
-    m_Enabled: 0
-    m_Devices: []
+    m_Devices:
+    - OpenVR
+    - cardboard
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
@@ -703,11 +680,11 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLWasmStreaming: 0
   scriptingDefineSymbols:
-    1: CROSS_PLATFORM_INPUT;VRTK_DEFINE_SDK_STEAMVR;VRTK_DEFINE_STEAMVR_PLUGIN_1_1_1_OR_OLDER;VRTK_VERSION_3_3_0;VRTK_VERSION_3_3_0_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER;VRTK_VERSION_3_2_1_OR_NEWER
+    1: CROSS_PLATFORM_INPUT;VRTK_VERSION_3_3_0;VRTK_VERSION_3_3_0_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER;VRTK_VERSION_3_2_1_OR_NEWER
     4: CROSS_PLATFORM_INPUT;MOBILE_INPUT;VRTK_VERSION_3_3_0;VRTK_VERSION_3_3_0_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER;VRTK_VERSION_3_2_1_OR_NEWER
     7: CROSS_PLATFORM_INPUT;MOBILE_INPUT;VRTK_VERSION_3_3_0;VRTK_VERSION_3_3_0_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER;VRTK_VERSION_3_2_1_OR_NEWER
     13: VRTK_VERSION_3_3_0;VRTK_VERSION_3_3_0_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER;VRTK_VERSION_3_2_1_OR_NEWER
-    14: MOBILE_INPUT;VRTK_DEFINE_SDK_WINDOWSMR;VRTK_VERSION_3_3_0;VRTK_VERSION_3_3_0_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER;VRTK_VERSION_3_2_1_OR_NEWER
+    14: MOBILE_INPUT;VRTK_VERSION_3_3_0;VRTK_VERSION_3_3_0_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER;VRTK_VERSION_3_2_1_OR_NEWER
     19: VRTK_VERSION_3_3_0;VRTK_VERSION_3_3_0_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER;VRTK_VERSION_3_2_1_OR_NEWER
     21: VRTK_VERSION_3_3_0;VRTK_VERSION_3_3_0_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER;VRTK_VERSION_3_2_1_OR_NEWER
     25: VRTK_VERSION_3_3_0;VRTK_VERSION_3_3_0_OR_NEWER;VRTK_VERSION_3_1_0_OR_NEWER;VRTK_VERSION_3_2_0_OR_NEWER;VRTK_VERSION_3_2_1_OR_NEWER
