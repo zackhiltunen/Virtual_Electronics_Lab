@@ -118,7 +118,7 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.subsystemregistration": "1.0.6"
+        "com.unity.subsystemregistration": "1.0.5"
       },
       "url": "https://packages.unity.com"
     },
@@ -149,13 +149,6 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.xr.openvr.standalone": {
-      "version": "2.0.5",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
     "com.unity.xr.windowsmr": {
       "version": "2.4.1",
       "depth": 0,
@@ -166,6 +159,16 @@
         "com.unity.xr.arsubsystems": "2.1.2"
       },
       "url": "https://packages.unity.com"
+    },
+    "com.valvesoftware.unity.openvr": {
+      "version": "file:../Assets/SteamVR/OpenVRUnityXRPackage/Editor/com.valvesoftware.unity.openvr-1.1.4.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.unity.xr.management": "3.2.13",
+        "com.unity.ugui": "1.0.0",
+        "com.unity.xr.legacyinputhelpers": "2.1.4"
+      }
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
