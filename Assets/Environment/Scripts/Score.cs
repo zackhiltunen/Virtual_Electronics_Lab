@@ -9,38 +9,54 @@ namespace cs4910.Scoreboards
     public class Score : MonoBehaviour
     {
         public Timer timer;
-        public SubmitCircuit button;
+        public KeypadAnswer button;
         public TextMeshProUGUI scoreboard;
+        public double attempts = 0;
+        double correctCircuits;
         double total_score;
+        int answer = 3;
+
         public void Start()
         {
+            correctCircuits = 0;
             total_score = 100;
             scoreboard.text = "100";
         }
 
         public void Update()
         {
-            if(button.n > 0)
+            if(button.buttonPressed > attempts)
             {
                 total_score = calculateScore(button, timer);
                 scoreboard.text = total_score.ToString();
+                attempts++;
             }
 
         }
 
-        public double calculateScore(SubmitCircuit buttonClicks, Timer time)
+        public double calculateScore(KeypadAnswer buttonClicks, Timer time)
         {
             double exp; 
             double retries;
             double new_score;
-            double correctCircuits; 
+            
             int timeSlot;
 
             new_score = 0;
-            correctCircuits = 1;
             exp = 1.01;
             timeSlot = 0;
-            retries =  correctCircuits / buttonClicks.n;
+
+            if(buttonClicks.result == 3)
+            {
+                correctCircuits = correctCircuits + 1;
+            }
+
+            else if(buttonClicks.result < 6 || buttonClicks.result > 1)
+            {
+                correctCircuits = correctCircuits + 0.5;
+            }
+
+            retries =  correctCircuits / buttonClicks.buttonPressed;
 
             if (time.min < 10)
             {
@@ -70,7 +86,16 @@ namespace cs4910.Scoreboards
                 timeSlot = 1;
             }
 
-            new_score = Math.Round(((1 / (Math.Pow(5, exp)) ) * (timeSlot) * (retries)) * 100, 2);
+            if(timeSlot == 5 && correctCircuits == buttonClicks.buttonPressed)
+            {
+                new_score = 100;
+            }
+
+            else
+            {
+                new_score = Math.Round(((1 / (Math.Pow(5, exp)) ) * (timeSlot) * (retries)) * 100, 1);
+            }
+            
             return new_score;
 
         }
