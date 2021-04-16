@@ -7,6 +7,7 @@ public class SpawnNewObject : MonoBehaviour
     public GameObject prefab;
     Vector3 myPosition;
     bool hasMoved;
+    
     void Start()
     {
         hasMoved = false;
@@ -15,12 +16,14 @@ public class SpawnNewObject : MonoBehaviour
 
     void Update()
     {
-        if(prefab.transform.position != myPosition && hasMoved == false)
+        if(prefab.transform.position != myPosition)
         {
             GameObject clone;
             hasMoved = true;
 
             clone = Instantiate(prefab, myPosition, prefab.transform.rotation);
+
+            prefab = clone;
         }
     }
 }

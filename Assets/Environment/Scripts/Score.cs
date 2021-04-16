@@ -53,7 +53,7 @@ namespace cs4910.Scoreboards
 
             else if(buttonClicks.result < 6 || buttonClicks.result > 1)
             {
-                correctCircuits = correctCircuits + 0.5;
+                correctCircuits = correctCircuits + 0.65;
             }
 
             retries =  correctCircuits / buttonClicks.buttonPressed;
