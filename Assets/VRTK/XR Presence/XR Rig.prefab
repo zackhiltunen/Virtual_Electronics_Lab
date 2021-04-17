@@ -2947,8 +2947,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   v: {fileID: 0}
   a: {fileID: 0}
-  vm: {fileID: 0}
-  am: {fileID: 0}
+  vText: {fileID: 0}
+  aText: {fileID: 0}
+  cl: {fileID: 0}
 --- !u!1 &2064729130560112593
 GameObject:
   m_ObjectHideFlags: 0

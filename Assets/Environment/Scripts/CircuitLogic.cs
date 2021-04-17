@@ -7,19 +7,19 @@ namespace XR_Presence.HUD
 {
     public class CircuitLogic : MonoBehaviour
     {
-        XRSocketInteractor Snap1;
-        XRSocketInteractor Snap2;
-        XRSocketInteractor Snap3;
-        XRSocketInteractor Snap4;
-        XRSocketInteractor Snap5;
-        XRSocketInteractor SnapVolt1;
-        XRSocketInteractor SnapVolt2;
-        XRSocketInteractor SnapVolt3;
-        XRSocketInteractor SnapVolt4;
-        XRSocketInteractor SnapVolt5;
+        public XRSocketInteractor Snap1;
+        public XRSocketInteractor Snap2;
+        public XRSocketInteractor Snap3;
+        public XRSocketInteractor Snap4;
+        public XRSocketInteractor Snap5;
+        public XRSocketInteractor SnapVolt1;
+        public XRSocketInteractor SnapVolt2;
+        public XRSocketInteractor SnapVolt3;
+        public XRSocketInteractor SnapVolt4;
+        public XRSocketInteractor SnapVolt5;
 
-        List<XRSocketInteractor> Snaps = new List<XRSocketInteractor>();
-        List<XRSocketInteractor> SnapVolts = new List<XRSocketInteractor>();
+        public List<XRSocketInteractor> Snaps = new List<XRSocketInteractor>();
+        public List<XRSocketInteractor> SnapVolts = new List<XRSocketInteractor>();
 
         bool isComplete;
         int[] resistances = {0,3,10,5,0};
@@ -28,7 +28,7 @@ namespace XR_Presence.HUD
 
         // Start is called before the first frame update
         void Start()
-        {
+        {   
             Snaps.Add(Snap1);
             Snaps.Add(Snap2);
             Snaps.Add(Snap3);
