@@ -16,6 +16,10 @@ namespace cs4910.Scoreboards
         public double attempts = 0;
         double correctCircuits;
         double total_score;
+        public double new_score;
+
+        bool finalScore = false;
+
         int answer = 3;
 
         public void Start()
@@ -27,7 +31,7 @@ namespace cs4910.Scoreboards
 
         public void Update()
         {
-            if(button.buttonPressed > attempts)
+            if(button.buttonPressed > attempts && !finalScore)
             {
                 total_score = calculateScore(button, timer, circuit.isComplete);
                 scoreboard.text = total_score.ToString();
@@ -40,20 +44,19 @@ namespace cs4910.Scoreboards
         {
             double exp; 
             double retries;
-            double new_score;
-            
+ 
             int timeSlot;
 
             new_score = 0;
             exp = 1.01;
             timeSlot = 0;
 
-
             if(completeCircuit)
             {
                 if(buttonClicks.result == 5)
                 {
                     correctCircuits = correctCircuits + 1;
+                    finalScore = true;
                 }
 
                 else if(buttonClicks.result < 7 || buttonClicks.result > 3)
