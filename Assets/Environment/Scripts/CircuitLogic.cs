@@ -21,7 +21,7 @@ namespace XR_Presence.HUD
         public List<XRSocketInteractor> Snaps = new List<XRSocketInteractor>();
         public List<XRSocketInteractor> SnapVolts = new List<XRSocketInteractor>();
 
-        bool isComplete;
+        public bool isComplete;
         int[] resistances = {0,3,10,5,0};
         public double voltage = 0;
         public double current = 0;

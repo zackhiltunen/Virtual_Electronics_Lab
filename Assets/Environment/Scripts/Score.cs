@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using XR_Presence.HUD;
 
 namespace cs4910.Scoreboards
 {
@@ -11,6 +12,7 @@ namespace cs4910.Scoreboards
         public Timer timer;
         public KeypadAnswer button;
         public TextMeshProUGUI scoreboard;
+        public CircuitLogic circuit;
         public double attempts = 0;
         double correctCircuits;
         double total_score;
@@ -27,14 +29,14 @@ namespace cs4910.Scoreboards
         {
             if(button.buttonPressed > attempts)
             {
-                total_score = calculateScore(button, timer);
+                total_score = calculateScore(button, timer, circuit.isComplete);
                 scoreboard.text = total_score.ToString();
                 attempts++;
             }
 
         }
 
-        public double calculateScore(KeypadAnswer buttonClicks, Timer time)
+        public double calculateScore(KeypadAnswer buttonClicks, Timer time, bool completeCircuit)
         {
             double exp; 
             double retries;
@@ -46,14 +48,23 @@ namespace cs4910.Scoreboards
             exp = 1.01;
             timeSlot = 0;
 
-            if(buttonClicks.result == 3)
+
+            if(completeCircuit)
             {
-                correctCircuits = correctCircuits + 1;
+                if(buttonClicks.result == 5)
+                {
+                    correctCircuits = correctCircuits + 1;
+                }
+
+                else if(buttonClicks.result < 7 || buttonClicks.result > 3)
+                {
+                    correctCircuits = correctCircuits + 0.65;
+                }
             }
 
-            else if(buttonClicks.result < 6 || buttonClicks.result > 1)
+            else
             {
-                correctCircuits = correctCircuits + 0.65;
+                correctCircuits = 0;
             }
 
             retries =  correctCircuits / buttonClicks.buttonPressed;
