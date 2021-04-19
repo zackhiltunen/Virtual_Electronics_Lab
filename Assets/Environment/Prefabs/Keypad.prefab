@@ -4867,7 +4867,7 @@ GameObject:
   - component: {fileID: 199136736294307837}
   - component: {fileID: 199136736294307838}
   - component: {fileID: 199136736294307839}
-  - component: {fileID: 199136736294307832}
+  - component: {fileID: 1362265132305611344}
   - component: {fileID: 199136736294307827}
   m_Layer: 5
   m_Name: Keypad
@@ -4906,7 +4906,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.329, y: -0.259}
+  m_AnchoredPosition: {x: 0.32901, y: -0.2590027}
   m_SizeDelta: {x: 0.75, y: 1.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &199136736294307837
@@ -4980,7 +4980,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &199136736294307832
+--- !u!114 &1362265132305611344
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4989,14 +4989,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 199136736294307834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2147483647
 --- !u!54 &199136736294307827
 Rigidbody:
   m_ObjectHideFlags: 0
