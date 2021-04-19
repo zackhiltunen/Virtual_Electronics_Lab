@@ -18,15 +18,15 @@ namespace cs4910.Scoreboards
         double total_score;
         public double new_score;
 
-        bool finalScore = false;
-
-        int answer = 3;
+        public bool finalScore = false;
+        public TextMeshProUGUI answerText;
 
         public void Start()
         {
             correctCircuits = 0;
             total_score = 100;
             scoreboard.text = "100";
+            answerText.text = " ";
         }
 
         public void Update()
@@ -57,17 +57,27 @@ namespace cs4910.Scoreboards
                 {
                     correctCircuits = correctCircuits + 1;
                     finalScore = true;
+                    answerText.text = "Correct";
+                    scoreboard.color = Color.green;
                 }
 
-                else if(buttonClicks.result < 7 || buttonClicks.result > 3)
+                else if(buttonClicks.result < 7 && buttonClicks.result > 3)
                 {
                     correctCircuits = correctCircuits + 0.65;
+                    answerText.text = "Close Answer";
+                    scoreboard.color = Color.yellow;
+                }
+                else
+                {
+                    answerText.text = "Incorrect";
+                    scoreboard.color = Color.red; 
                 }
             }
 
             else
             {
                 correctCircuits = 0;
+                answerText.text = "Complete the Circuit";
             }
 
             retries =  correctCircuits / buttonClicks.buttonPressed;
