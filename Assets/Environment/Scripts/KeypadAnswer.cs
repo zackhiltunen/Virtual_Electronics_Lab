@@ -28,6 +28,7 @@ namespace cs4910.Scoreboards
         public Button submit;
         void Start()
         {
+            
             one.GetComponent<Button>().onClick.AddListener(pressOne);
             two.GetComponent<Button>().onClick.AddListener(pressTwo);
             three.GetComponent<Button>().onClick.AddListener(pressThree);
@@ -49,62 +50,62 @@ namespace cs4910.Scoreboards
                 display.text = input;
             }
         }
-        void pressOne()
+        public void pressOne()
         {
             input = input + "1";
         }
         
-        void pressTwo()
+        public void pressTwo()
         {
             input = input + "2";
         }
 
-        void pressThree()
+        public void pressThree()
         {
             input = input + "3";
         }
 
-        void pressFour()
+        public void pressFour()
         {
             input = input + "4";
         }
 
-        void pressFive()
+        public void pressFive()
         {
             input = input + "5";
         }
 
-        void pressSix()
+        public void pressSix()
         {
             input = input + "6";
         }
 
-        void pressSeven()
+        public void pressSeven()
         {
             input = input + "7";
         }
 
-        void pressEight()
+        public void pressEight()
         {
             input = input + "8";
         }
 
-        void pressNine()
+        public void pressNine()
         {
             input = input + "9";
         }
 
-        void pressZero()
+        public void pressZero()
         {
             input = input + "0";
         }
 
-        void pressClear()
+        public void pressClear()
         {
             input = "";
         }
 
-        void pressSubmit()
+        public void pressSubmit()
         {
             buttonPressed++;
             result = Int32.Parse(input);

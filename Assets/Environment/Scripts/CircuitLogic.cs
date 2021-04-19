@@ -52,6 +52,8 @@ namespace XR_Presence.HUD
             {
                 for(int i = 0; i < 5; i++)
                 {
+                    // m_ValidTargets is originally a private variable
+                    // if the attribute is not found, verify that it is public
                     if(SnapVolts[i].m_ValidTargets.Count > 0){
                         voltage = getVoltage(Snaps[i],SnapVolts[i], i);
                         current = 0.5;
